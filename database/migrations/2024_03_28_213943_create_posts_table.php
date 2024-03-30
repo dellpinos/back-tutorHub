@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('level');
             $table->foreignId('categories_id')->constrained()->onDelete('cascade');
             $table->foreignId('subcategories_id')->constrained()->onDelete('cascade');
-            $table->integer('students_acu');
+            $table->integer('students_acu')->default(0);
 
         });
     }
